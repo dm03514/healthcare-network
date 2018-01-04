@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" type="text/css"/>
+<style type="text/css">
+  #network {
+    max-width: 1600px;
+    height: 800px;
+    border: 1px solid lightgray;
+  }
+</style>
+</head>
+<body>
+<div id="network"></div>
+<script>
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+  ]);
+
+  // create a network
+  var container = document.getElementById('network');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    layout: {
+        hierarchical: {
+            direction: "Up-Down"
+        }
+    }
+  };
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>
